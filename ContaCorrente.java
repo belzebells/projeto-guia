@@ -4,10 +4,11 @@ public class ContaCorrente extends Conta {
 	// TODO Auto-generated constructor stub
 
 	private float limite;
-	public ContaCorrente(int numero, int agencia, int tipo, String titular, float saldo) {
+	
+	public ContaCorrente(int numero, int agencia, int tipo, String titular, float saldo, float limite) {
 		super(numero, agencia, tipo, titular, saldo);
 		this.limite = limite;
-		
+			
 	}
 	public float getLimite() {
 		return limite;
@@ -31,11 +32,7 @@ public class ContaCorrente extends Conta {
 		super.visualizar();
 		System.out.println("limite de crédito: "+this.limite);
 	}
-	
-	
-	
-	
-	} 
+		} 
 	
 
 

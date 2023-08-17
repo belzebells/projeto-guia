@@ -1,6 +1,6 @@
 package conta.model;
 
-public class Conta {
+public abstract class Conta {
 
 	private int numero;
 	private int agencia;
@@ -59,7 +59,7 @@ public class Conta {
 
 	public boolean sacar(float valor) {
 		if (this.getSaldo() < valor) {
-			System.out.println("\n saldo insuficiente.");
+			System.out.println("\nsaldo insuficiente.");
 		}
 
 		this.setSaldo(this.getSaldo() - valor);
@@ -92,14 +92,14 @@ public class Conta {
 			tipo = "conta poupança";
 			break;
 		}
-		System.out.println("\n\n-------------------------------------------------------");
-		System.out.println("\n\ndados da conta: ");
-		System.out.println("\n\n------------------------------------------------");
-		System.out.println("\n\nnúmero da conta: " + this.getNumero());
-		System.out.println("\n\nagência: " + this.getAgencia());
-		System.out.println("\n\ntipo de conta: " + tipo);
-		System.out.println("\n\ntitular: " + this.getTitular());
-		System.out.println("\n\nagência: " + this.getSaldo());
+		System.out.println("-------------------------------------------------------");
+		System.out.println("dados da conta: ");
+		System.out.println("------------------------------------------------");
+		System.out.println("número da conta: " + this.getNumero());
+		System.out.println("agência: " + this.getAgencia());
+		System.out.println("tipo de conta: " + tipo);
+		System.out.println("titular: " + this.getTitular());
+		System.out.println("agência: " + this.getSaldo());
 
 	}
 }
